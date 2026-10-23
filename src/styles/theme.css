@@ -30,5 +30,75 @@
   }
 */
 
-:root {
+/*
+  Renter-friendly small-space decor theme.
+  Warm linen canvas, soft cream cards, terracotta brand, and a serif
+  display face for headings. One accent only: --color-brand.
+  `html:root` outranks the `:root` rules the font pipeline injects, so
+  the font overrides below win regardless of stylesheet order.
+*/
+
+html:root {
+	/* Colors */
+	--color-bg: light-dark(#f6f1ea, #1a1714);
+	--color-surface: light-dark(#fffcf7, #221e1a);
+	--color-fill: light-dark(#efe7dc, #2b2621);
+	--color-fill-strong: light-dark(#e6dccd, #35302a);
+	--color-text: light-dark(#2a241f, #efe8df);
+	--color-text-secondary: light-dark(#564b41, #c7bbad);
+	--color-muted: light-dark(#6f6257, #a39686);
+	--color-border: light-dark(#e6ddd1, #352f29);
+	--color-border-subtle: light-dark(#efe8de, #2a251f);
+	--color-border-strong: light-dark(#d6cabb, #4a423a);
+	--color-ring: light-dark(rgb(74 52 30 / 0.08), rgb(255 240 220 / 0.08));
+	--color-media-outline: light-dark(rgb(74 52 30 / 0.1), rgb(255 240 220 / 0.1));
+	--color-shadow: light-dark(rgb(74 52 30 / 0.06), rgb(0 0 0 / 0.4));
+	--color-shadow-strong: light-dark(rgb(74 52 30 / 0.14), rgb(0 0 0 / 0.6));
+	--color-brand: light-dark(#8a4b2f, #e0a07c);
+	--color-brand-hover: light-dark(#6f3a23, #ecb896);
+	--color-on-brand: light-dark(#fffaf3, #1a1714);
+
+	/* Typography: serif headings, Inter body, labels in the body face */
+	--font-heading: var(--font-display), "Iowan Old Style", Georgia, serif;
+	--font-mono: var(--font-body);
+	--font-weight-heading: 500;
+	--font-weight-display: 500;
+	--tracking-tight: -0.015em;
+	--tracking-snug: -0.01em;
+
+	/* Softer, more home-like shapes */
+	--radius-lg: 14px;
+	--radius-xl: 20px;
+}
+
+@supports not (color: light-dark(#000, #fff)) {
+	html:root {
+		color-scheme: light;
+		--color-bg: #f6f1ea;
+		--color-surface: #fffcf7;
+		--color-fill: #efe7dc;
+		--color-fill-strong: #e6dccd;
+		--color-text: #2a241f;
+		--color-text-secondary: #564b41;
+		--color-muted: #6f6257;
+		--color-border: #e6ddd1;
+		--color-border-subtle: #efe8de;
+		--color-border-strong: #d6cabb;
+		--color-ring: rgb(74 52 30 / 0.08);
+		--color-media-outline: rgb(74 52 30 / 0.1);
+		--color-shadow: rgb(74 52 30 / 0.06);
+		--color-shadow-strong: rgb(74 52 30 / 0.14);
+		--color-brand: #8a4b2f;
+		--color-brand-hover: #6f3a23;
+		--color-on-brand: #fffaf3;
+	}
+}
+
+.affiliate-note {
+	flex-basis: 100%;
+	max-width: 60ch;
+	margin: 0;
+	font-size: var(--font-size-xs);
+	line-height: var(--leading-normal);
+	color: var(--color-muted);
 }

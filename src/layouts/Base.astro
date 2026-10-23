@@ -113,6 +113,7 @@ const year = new Date().getFullYear();
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<Font cssVariable="--font-body" preload />
+		<Font cssVariable="--font-display" preload />
 		<Font cssVariable="--font-mono" />
 		<title>{fullTitle}</title>
 		<EmDashHead page={pageCtx} />
@@ -338,6 +339,10 @@ const year = new Date().getFullYear();
 			</div>
 			<div class="band site-footer__bottom">
 				<div class="frame site-footer__bottom-inner">
+					<p class="affiliate-note">
+						Some links on this site are affiliate links. If you buy through them, we
+						may earn a small commission at no extra cost to you.
+					</p>
 					<p class="site-footer__meta">
 						{`© ${year} ${siteTitle}.`} Powered by{" "}
 						<a href="https://emdashcms.com">EmDash</a>
