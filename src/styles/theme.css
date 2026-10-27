@@ -102,3 +102,20 @@ html:root {
 	line-height: var(--leading-normal);
 	color: var(--color-muted);
 }
+
+/* Brand: house + heart mark (matches the Pinterest logo) and serif wordmark */
+html .brand .brand__mark {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 9px;
+	background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%235d7a5c%22/%3E%3Cpath d=%22M32 12 10 31h6v20h32V31h6z%22 fill=%22%23fffaf3%22 stroke=%22%23fffaf3%22 stroke-width=%223%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M32 46s-10-6-10-12.5c0-3.3 2.5-5.5 5.3-5.5 2 0 3.7 1.2 4.7 3 1-1.8 2.7-3 4.7-3 2.8 0 5.3 2.2 5.3 5.5C42 40 32 46 32 46z%22 fill=%22%23c8794a%22/%3E%3C/svg%3E") center / cover no-repeat;
+	color: transparent;
+	font-size: 0;
+}
+html .brand .brand__name {
+	font-family: var(--font-heading);
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: light-dark(#1f3b2d, #e9e2d6);
+}
